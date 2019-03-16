@@ -1,0 +1,50 @@
+{
+  "name": "gulp-yaml-lint",
+  "version": "1.0.0",
+  "description": "Simple gulp plugin to validate YAML files",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint *.js **/*.js",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imurchie/gulp-yaml-lint.git"
+  },
+  "keywords": [
+    "gulp",
+    "yaml",
+    "lint"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "Isaac Murchie",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/imurchie/gulp-yaml-lint/issues"
+  },
+  "homepage": "https://github.com/imurchie/gulp-yaml-lint#readme",
+  "dependencies": {
+    "ansi-red": "^0.1.1",
+    "fancy-log": "^1.3.3",
+    "js-yaml": "^3.12.2",
+    "plugin-error": "^1.0.1"
+  },
+  "devDependencies": {
+    "acorn": "^6.1.1",
+    "eslint": "^5.15.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "husky": "^1.3.1",
+    "jest": "^24.5.0",
+    "should": "^13.2.3",
+    "vinyl": "^2.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
